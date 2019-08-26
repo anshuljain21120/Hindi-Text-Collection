@@ -1,3 +1,4 @@
+# This code is site specific. Only for site https://www.deepawali.co.in/
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 import requests
@@ -16,23 +17,28 @@ def getPages(url, uLimit=12000, eCount=5):
             try:
                 for a0 in getSoup(url+str(a['href'])).find("div", attrs = {'class' : 'newsFJagran'}).find_all('a'):
                     pages.add(url+str(a0['href']))
+                    print("\r {0:,} links pulled still fetching...".format(len(pages)), end="")
                 for i in range(2, uLimit):
                     header = str(a['href'])[:-5]+'-page'+str(i)+".html"
                     for ai in getSoup(url+header).find("div", attrs = {'class' : 'newsFJagran'}).find_all('a'):
                         pages.add(url+str(ai['href']))
+                        print("\r {0:,} links pulled still fetching...".format(len(pages)), end="")
             except:
                 for a0 in getSoup(url+str(a['href'])).find_all("a", attrs = {'class' : 'aarPadhe'}):
                     try:
                         for a1 in getSoup(url+str(a0['href'])).find("div", attrs = {'class' : 'newsFJagran'}).find_all('a'):
                             pages.add(url+str(a1['href']))
+                            print("\r {0:,} links pulled still fetching...".format(len(pages)), end="")
                         for i in range(2, uLimit):
                             header = str(a0['href'])[:-5]+'-page'+str(i)+".html"
                             for ai in getSoup(url+header).find("div", attrs = {'class' : 'newsFJagran'}).find_all('a'):
                                 pages.add(url+str(ai['href']))
+                                print("\r {0:,} links pulled still fetching...".format(len(pages)), end="")
                     except:
                         cErrorCount += 1
                         if cErrorCount >= eLimit:
                             break
+    print("\r Total {0:,} links fetched.             ".format(len(pages)))
     return pages
 def getText(links):
     textData = set()
