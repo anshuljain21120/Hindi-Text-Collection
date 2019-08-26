@@ -16,7 +16,6 @@ def getSoup(url):
 def getPages(uLimit=12000, eLimit=5):
 	url = "https://aajtak.intoday.in"
 	pages = set()
-	t = 0
 	try:
 		for a in getSoup(url).find('nav').find_all('a'):
 			for i in range(uLimit):
@@ -24,7 +23,6 @@ def getPages(uLimit=12000, eLimit=5):
 					cErrorCount = 0
 					for a in getSoup(url+str(a['href'])+"/"+str(i)).find_all('a', class_='photoHitContainer1'):
 						pages.add(url+str(a['href']))
-						t += 1
 						print("\r {0:,} links pulled still fetching...".format(len(pages)), end="")
 				except:
 					cErrorCount += 1
@@ -32,7 +30,7 @@ def getPages(uLimit=12000, eLimit=5):
 						break
 	except:
 		print("Network error!")
-	print("\r Total {0:,} links fetched.             ".format(len(pages)))
+	print("\r Total {:,} links fetched.             ".format(len(pages)))
 	return pages
 
 def getText(links):
