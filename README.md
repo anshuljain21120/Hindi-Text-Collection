@@ -2,8 +2,8 @@
 This repository is open to all who wants to contribute in making simple and efficient codes to scrap Hindi text data from different sources. Motive of creating this repository is to push development of NLP in Hindi language.
 ## Contents 
 There are two main divisions:
-<li>News sites</li>
-<li>Dictionaries</li>
+  <li>News sites</li>
+  <li>Dictionaries</li>
 
 ### News Sites
 Contains programs that can get text from these Hindi News sites. All programs have same method names. In which getPages() gives you links of all the webpages of that site that have Hindi news articles. Then getText(webpages) method should give you all the text from  input webpages.
@@ -13,7 +13,7 @@ Contains programs that will give you Hindi words after scrapping these dictionar
 
 ### Requirements
 The following python packages are required (Python 3).
-<li><a href='https://pypi.org/project/beautifulsoup4/'>Beautiful Soup</a> 4.4.0</li>
-<li><a href='https://pypi.org/project/urllib3/'>urllib3</a> 1.24.1</li>
-<li><a href='https://pypi.org/project/regex/'>regex</a> 2019.4.14</li>
-<li><a href='https://pypi.org/project/numpy/'>numpy</a> 1.16.2</li>
+  <li><a href='https://pypi.org/project/beautifulsoup4/'>Beautiful Soup</a> 4.4.0</li>
+  <li><a href='https://pypi.org/project/urllib3/'>urllib3</a> 1.24.1</li>
+  <li><a href='https://pypi.org/project/regex/'>regex</a> 2019.4.14</li>
+  <li><a href='https://pypi.org/project/numpy/'>numpy</a> 1.16.2</li>
