@@ -13,7 +13,7 @@ Contains programs that will give you Hindi words after scrapping these dictionar
 
 ### Requirements
 The following python packages are required (Python 3).
-<li>numpy 1.16.2</li>
-<li>Beautiful Soup 4.4.0</li>
+<li><a href='https://pypi.org/project/beautifulsoup4/'>Beautiful Soup</a> 4.4.0</li>
 <li><a href='https://pypi.org/project/urllib3/'>urllib3</a> 1.24.1</li>
-<li>regex 2019.4.14</li>
+<li><a href='https://pypi.org/project/regex/'>regex</a> 2019.4.14</li>
+<li><a href='https://pypi.org/project/numpy/'>numpy</a> 1.16.2</li>
