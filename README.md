@@ -4,12 +4,17 @@ This repository is open to all who wants to contribute in making simple and effi
 There are two main divisions:
   <li>News sites</li>
   <li>Dictionaries</li>
-
+  <li>Articles</li>
+  
 ### News Sites
 Contains programs that can get text from these Hindi News sites. All programs have same method names. In which getPages() gives you links of all the webpages of that site that have Hindi news articles. Then getText(webpages) method should give you all the text from  input webpages.
 
 ### Dictionaries
 Contains programs that will give you Hindi words after scrapping these dictionaries.
+
+
+### Articles
+Articles include <a href="https://hi.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0">Wikipedia</a>, and websites having essays, articles. The folder has programs to extract them to text objects.
 
 ### Requirements
 The following python packages are required (Python 3).
