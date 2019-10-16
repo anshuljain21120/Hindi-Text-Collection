@@ -5,6 +5,7 @@ def tokenize(fin):
 	fin = fin.replace(',',' ')
 	text = hindi.sub(' ',fin).strip()
 	words = set()
+	print("Creating unique set of words")
 	for word in text.split():
 	    words.add(word)
 	return set(sorted(words))
